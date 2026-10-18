@@ -44,7 +44,7 @@
     title: 'Termos de Uso e Privacidade',
     html: `<div class="prose">
       <p><b>Versão de demonstração.</b> Este texto é um modelo e deve ser revisado por um profissional jurídico antes de qualquer uso real.</p>
-      <h3>Como funciona</h3><p>O ServiceAproxima conecta clientes a profissionais autônomos. A plataforma não é empregadora dos profissionais nem garante a execução dos serviços.</p>
+      <h3>Como funciona</h3><p>O ServiceAproxima conecta famílias a babás, domésticas e cuidadores de idosos autônomos. A plataforma não é empregadora dos profissionais nem garante a execução dos serviços.</p>
       <h3>Seus dados</h3><p>Nesta versão, tudo o que você informa fica salvo apenas neste navegador (localStorage) e não é enviado a nenhum servidor. Limpar os dados do navegador apaga a conta.</p>
       <h3>Pagamentos</h3><p>Os pagamentos são simulados. Nenhuma cobrança real é feita e números de cartão não são armazenados.</p>
       <h3>Conduta</h3><p>Seja respeitoso, informe dados verdadeiros e cumpra o combinado.</p></div>`
@@ -60,7 +60,7 @@
       return `<section class="screen splash">
         <div class="splash-top">${U.logo(112)}
           <h1 class="wordmark"><span class="w1">Service</span><span class="w2">Aproxima</span></h1>
-          <p>Serviços perto de você</p></div>
+          <p>Cuidado de confiança perto de você</p></div>
         <div class="splash-actions">
           <button class="btn go lg" data-action="go" data-to="/entrar/cliente">Sou Cliente ${icon('chevron', 18)}</button>
           <button class="btn indigo lg" data-action="go" data-to="/entrar/prestador">Sou Prestador ${icon('chevron', 18)}</button>
@@ -74,7 +74,7 @@
     public: true,
     async render(ctx) {
       const role = ctx.params.role === 'prestador' ? 'prestador' : 'cliente';
-      const demo = role === 'prestador' ? 'marcos@demo.com' : 'ana@demo.com';
+      const demo = role === 'prestador' ? 'marcia@demo.com' : 'ana@demo.com';
       return `<section class="screen auth">
         ${UI.header({ title: role === 'prestador' ? 'Entrar como prestador' : 'Entrar como cliente', back: '/', plain: true })}
         <div class="scroll"><div class="auth-body">
@@ -177,11 +177,11 @@
             <div class="chips" role="group" aria-label="Serviços prestados">
               ${CFG.CATEGORIES.map((c) => `<label class="chip-check"><input type="checkbox" name="cat" value="${c.id}" ${b.categories.includes(c.id) ? 'checked' : ''} /><span>${icon(c.icon, 16)} ${esc(c.name)}</span></label>`).join('')}
             </div>
-            ${UI.field({ label: 'Como você se apresenta?', name: 'headline', value: b.headline, placeholder: 'Ex.: Eletricista residencial', maxlength: 60 })}
+            ${UI.field({ label: 'Como você se apresenta?', name: 'headline', value: b.headline, placeholder: 'Ex.: Babá com experiência em recém-nascidos', maxlength: 60 })}
             <div class="field"><label for="f_radius">Raio de atendimento: <b id="radiusOut">${b.radiusKm} km</b></label>
               <input id="f_radius" name="radiusKm" type="range" min="5" max="100" step="5" value="${b.radiusKm}" data-input="radius" />
               <div class="range-scale"><span>5 km</span><span>100 km</span></div></div>
-            ${UI.field({ label: 'Nome artístico / empresa', name: 'businessName', value: b.businessName, placeholder: 'Ex.: Silva Pinturas & Cia' })}
+            ${UI.field({ label: 'Nome artístico / empresa', name: 'businessName', value: b.businessName, placeholder: 'Ex.: Cuidar Bem Serviços' })}
             ${UI.field({ label: 'Redes sociais / portfólio', name: 'social', value: b.social, placeholder: 'instagram.com/seuperfil' })}
             <label class="check"><input type="checkbox" name="terms" required /><span>Li e aceito os <button type="button" class="link" data-action="terms">Termos de Uso</button> e a Política de Prestadores.</span></label>
             <div class="form-error" role="alert" hidden></div>

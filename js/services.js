@@ -68,7 +68,7 @@
       await DB.kv.set('session', u.id);
       return u;
     },
-    async loginDemo(role) { return this.login(role === 'prestador' ? 'marcos@demo.com' : 'ana@demo.com', g.Seed.DEMO_PASSWORD); },
+    async loginDemo(role) { return this.login(role === 'prestador' ? 'marcia@demo.com' : 'ana@demo.com', g.Seed.DEMO_PASSWORD); },
     async logout() { await DB.kv.remove('session'); },
     async update(userId, patch) {
       return DB.users.update(userId, (u) => {

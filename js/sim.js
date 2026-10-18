@@ -5,7 +5,7 @@
    Para você testar o fluxo completo, os profissionais de EXEMPLO (os que não
    têm login) respondem sozinhos: mandam mensagem e uma proposta alguns
    segundos depois do pedido. Dá para desligar em Perfil > Modo demonstração.
-   Contas reais criadas por você (e a conta Marcos Silva) nunca são simuladas.
+   Contas reais criadas por você (e a conta Márcia Souza) nunca são simuladas.
    ========================================================================== */
 (function (g) {
   'use strict';
@@ -13,11 +13,11 @@
 
   const isSimPro = (u) => !!(u && u.role === 'prestador' && u.seed && !u.passHash);
   const wait = (a, b) => (a + Math.random() * (b - a)) * 1000;
-  const DURATION = { pintura: 4, eletrica: 2, encanador: 2, diarista: 6, reparos: 2, outros: 2 };
+  const DURATION = { baba: 4, domestica: 6, cuidador: 8 };
   const TERMS = [
-    'Material não incluso. Garantia de 90 dias sobre o serviço.',
-    'Material incluso. Deixo o local limpo ao final.',
-    'Valor fechado, sem custo extra de deslocamento.'
+    'Tenho referências e posso apresentar na primeira visita. Pontualidade combinada em contrato simples.',
+    'Atendimento com atenção total e relatório rápido ao final de cada turno.',
+    'Valor fechado, sem custo extra de deslocamento. Primeira conversa sem compromisso.'
   ];
 
   async function enqueue(task) {

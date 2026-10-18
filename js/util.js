@@ -185,7 +185,9 @@
     mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
     refresh: '<path d="M20 11a8 8 0 0 0-14-4M4 4v4h4M4 13a8 8 0 0 0 14 4M20 20v-4h-4"/>',
     percent: '<path d="M6 18L18 6"/><circle cx="7.5" cy="7.5" r="2"/><circle cx="16.5" cy="16.5" r="2"/>',
-    list: '<path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/>'
+    list: '<path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/>',
+    baby: '<circle cx="12" cy="13" r="8"/><path d="M9 12h.01M15 12h.01M9.5 16c1.5 1.3 3.5 1.3 5 0"/><path d="M12 5c0-1.6 1.4-2.4 2.6-1.6"/>',
+    heart: '<path d="M12 20s-7.5-4.6-9-9.5A4.8 4.8 0 0 1 12 7a4.8 4.8 0 0 1 9 3.5C19.5 15.4 12 20 12 20z"/>'
   };
   U.icon = (name, size, cls) => {
     const s = size || 20;

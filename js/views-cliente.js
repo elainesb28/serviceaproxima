@@ -102,7 +102,7 @@
         ${UI.header({ title: 'Buscar serviços', right: UI.bellButton(ctx.badges.bell, 'c') })}
         <div class="scroll">
         <form class="searchbar" data-submit="search" role="search">${icon('search', 20)}
-          <input name="q" value="${esc(ex.q)}" data-input="q" placeholder="Pintor, eletricista, diarista..." aria-label="Buscar profissionais" autocomplete="off" /></form>
+          <input name="q" value="${esc(ex.q)}" data-input="q" placeholder="Babá, doméstica, cuidador de idosos..." aria-label="Buscar profissionais" autocomplete="off" /></form>
         <div class="searchbar place">${icon('pin', 20)}<input name="place" value="${esc(ex.place)}" data-input="place" placeholder="Bairro ou cidade" aria-label="Filtrar por bairro ou cidade" autocomplete="off" /></div>
         <div class="chips scroll-x" role="group" aria-label="Categorias">
           <button class="chip ${!ex.cat ? 'on' : ''}" data-action="ex-cat" data-id="">Todas</button>
